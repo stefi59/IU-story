@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IU – Lee Ji-eun | Fan Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--cream:#faf6f1;--warm:#f0e8dc;--gold:#c8a96e;--gold-light:#e8d4a8;--dark:#1a1410;--mid:#4a3728;--soft:#8a7060;--accent:#b85c5c;--sbg:#fff9f3}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
+    .lang-bar{position:fixed;top:12px;right:12px;z-index:999;display:flex;gap:8px}
+    .lang-bar a{background:rgba(200,169,110,.15);border:1px solid var(--gold);color:var(--gold);padding:7px 16px;border-radius:30px;text-decoration:none;font-size:.82rem;letter-spacing:.06em;transition:all .3s}
+    .lang-bar a:hover,.lang-bar a.active{background:var(--gold);color:var(--dark)}
+    .hero{min-height:100vh;background:linear-gradient(160deg,#1a1410 0%,#2d1f16 40%,#4a2e20 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 20px 60px}
+    .hero-eyebrow{font-size:.72rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+    .hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(6rem,20vw,12rem);font-weight:300;color:#fff;line-height:.9}
+    .hero-name span{color:var(--gold);font-style:italic}
+    .hero-korean{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,3vw,1.8rem);color:var(--gold-light);font-style:italic;margin-top:14px;opacity:.8}
+    .hero-tagline{margin-top:28px;font-size:clamp(.85rem,2vw,1rem);color:rgba(255,255,255,.55);font-weight:300;max-width:480px;line-height:1.7}
+    .hero-roles{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .role-tag{border:1px solid rgba(200,169,110,.4);color:var(--gold-light);padding:5px 14px;border-radius:20px;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
+    .hero-scroll{margin-top:48px;display:flex;flex-direction:column;gap:10px;align-items:center}
+    .hero-scroll p{font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:.15em;text-transform:uppercase}
+    .scroll-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .scroll-links a{background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);color:var(--gold-light);padding:8px 18px;border-radius:30px;text-decoration:none;font-size:.78rem;letter-spacing:.08em;transition:all .3s}
+    .scroll-links a:hover{background:var(--gold);color:var(--dark);border-color:var(--gold)}
+    .section{padding:70px 24px 80px;max-width:860px;margin:0 auto}
+    .section+.section{border-top:1px solid var(--warm)}
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,7vw,4rem);font-weight:300;color:var(--dark);margin-bottom:8px}
+    .section-title span{color:var(--gold);font-style:italic}
+    .section-line{width:50px;height:2px;background:var(--gold);margin-bottom:36px}
+    .prose{font-size:1rem;line-height:1.9;color:var(--mid);font-weight:300}
+    .prose p{margin-bottom:18px}.prose strong{color:var(--dark);font-weight:500}
+    .quote-box{background:linear-gradient(135deg,var(--dark),var(--mid));border-radius:16px;padding:36px 36px 36px 40px;margin:36px 0;position:relative;overflow:hidden}
+    .quote-box::before{content:'"';position:absolute;top:-20px;left:14px;font-family:'Cormorant Garamond',serif;font-size:11rem;color:rgba(200,169,110,.1);line-height:1}
+    .quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.5vw,1.6rem);font-style:italic;color:var(--cream);line-height:1.65;position:relative;z-index:1}
+    .quote-attr{margin-top:14px;font-size:.78rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;position:relative;z-index:1}
+    .timeline{margin-top:36px}
+    .tl-item{display:grid;grid-template-columns:72px 1fr;gap:20px;margin-bottom:32px}
+    .tl-year{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--gold);text-align:right;padding-top:3px;line-height:1.2}
+    .tl-body{border-left:2px solid var(--gold-light);padding-left:22px}
+    .tl-body h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--dark);margin-bottom:5px}
+    .tl-body p{font-size:.93rem;line-height:1.75;color:var(--soft)}
+    .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:36px 0}
+    @media(min-width:600px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+    .stat-card{background:var(--sbg);border:1px solid var(--gold-light);border-radius:12px;padding:24px 16px;text-align:center}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--gold);line-height:1}
+    .stat-lbl{font-size:.76rem;color:var(--soft);margin-top:7px;line-height:1.4}
+    .pak-item{margin-bottom:14px}
+    .pak-row{display:flex;justify-content:space-between;margin-bottom:5px;font-size:.88rem;color:var(--mid)}
+    .pak-row strong{color:var(--dark)}
+    .pak-track{background:var(--warm);border-radius:4px;height:13px;overflow:hidden}
+    .pak-fill{height:100%;border-radius:4px}
+    .pak-note{font-size:.81rem;color:var(--soft);margin-top:16px;line-height:1.7}
+    .aw-cat{margin-bottom:32px}
+    .aw-cat h3{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--gold);font-weight:400;font-style:italic;margin-bottom:10px}
+    .aw-item{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--warm);align-items:start}
+    .aw-badge{background:var(--gold);color:var(--dark);font-size:.7rem;font-weight:500;padding:3px 9px;border-radius:20px;white-space:nowrap;margin-top:2px;flex-shrink:0}
+    .aw-info{font-size:.9rem;color:var(--mid);line-height:1.5}
+    .aw-info strong{color:var(--dark);display:block}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+    @media(max-width:500px){.compare-grid{grid-template-columns:1fr}}
+    .cmp-card{border-radius:12px;padding:24px}
+    .cmp-card.past{background:#2d1f16;color:rgba(255,255,255,.8)}
+    .cmp-card.now{background:var(--sbg);border:1px solid var(--gold-light);color:var(--mid)}
+    .cmp-card h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:12px}
+    .cmp-card.past h4{color:#e8b87a}.cmp-card.now h4{color:var(--gold)}
+    .cmp-card ul{list-style:none}
+    .cmp-card ul li{padding:5px 0;font-size:.87rem;border-bottom:1px solid rgba(255,255,255,.06)}
+    .cmp-card.now ul li{border-color:var(--warm)}
+    .don-card{background:linear-gradient(135deg,#1a3a2a,#2d5a3d);border-radius:16px;padding:32px;margin:28px 0;color:white}
+    .don-card h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;margin-bottom:14px;color:#a8d5b5}
+    .don-card p{font-size:.93rem;line-height:1.85;color:rgba(255,255,255,.82);margin-bottom:10px}
+    .gal-notice{background:var(--sbg);border:1px solid var(--gold-light);border-radius:12px;padding:28px;text-align:center;color:var(--soft);margin-bottom:24px}
+    .gal-notice h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);margin-bottom:10px}
+    .gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-bottom:32px}
+    .gal-ph{aspect-ratio:3/4;background:linear-gradient(135deg,var(--warm),var(--gold-light));border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gold);font-size:.78rem;text-align:center;padding:16px;border:1px dashed var(--gold-light)}
+    .gal-ph span.ico{font-size:1.8rem;margin-bottom:8px}
+    .vid-title{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--gold);margin-bottom:14px}
+    .vid-item{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--warm);text-decoration:none;color:var(--mid)}
+    .vid-icon{width:34px;height:34px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:.85rem;flex-shrink:0}
+    .vid-info strong{display:block;font-size:.9rem;color:var(--dark)}
+    .vid-info small{font-size:.78rem;color:var(--soft)}
+    .back-top{display:block;text-align:center;padding:20px;color:var(--gold);text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+    footer{background:var(--dark);color:rgba(255,255,255,.4);text-align:center;padding:28px 20px;font-size:.78rem;letter-spacing:.07em}
+    footer span{color:var(--gold)}
+    @media(max-width:480px){.tl-item{grid-template-columns:56px 1fr;gap:12px}.tl-year{font-size:1.2rem}.quote-box{padding:24px 20px}}
+  </style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <a href="javascript:void(0)" onclick="setLang('ro')" id="btn-ro" class="active">&#127777; RO</a>
+  <a href="javascript:void(0)" onclick="setLang('en')" id="btn-en">&#127468;&#127463; EN</a>
+</div>
+
+<div class="hero" id="top">
+  <p class="hero-eyebrow">Lee Ji-eun · &#51060;&#51648;&#51008;</p>
+  <h1 class="hero-name">I<span>U</span></h1>
+  <p class="hero-korean">&#51060;&#51648;&#51008; · Lee Ji-eun</p>
+  <p class="hero-tagline ro">De la o cameră cu gândaci la vârful industriei muzicale coreene. O poveste despre reziliență, talent și inimă.</p>
+  <p class="hero-tagline en">From a cockroach-infested room to the top of the Korean music industry. A story of resilience, talent, and heart.</p>
+  <div class="hero-roles">
+    <span class="role-tag ro">Cântăreață</span><span class="role-tag en">Singer</span>
+    <span class="role-tag ro">Actriță</span><span class="role-tag en">Actress</span>
+    <span class="role-tag ro">Compozitoare</span><span class="role-tag en">Songwriter</span>
+    <span class="role-tag ro">Producătoare</span><span class="role-tag en">Producer</span>
+    <span class="role-tag ro">Textieră</span><span class="role-tag en">Lyricist</span>
+  </div>
+  <div class="hero-scroll">
+    <p class="ro">Explorează</p><p class="en">Explore</p>
+    <div class="scroll-links">
+      <a href="#biografie" class="ro">Biografie</a><a href="#biografie" class="en">Biography</a>
+      <a href="#cronologie" class="ro">Cronologie</a><a href="#cronologie" class="en">Timeline</a>
+      <a href="#muzica" class="ro">Muzică &amp; PAK</a><a href="#muzica" class="en">Music &amp; PAK</a>
+      <a href="#actorie" class="ro">Actorie</a><a href="#actorie" class="en">Acting</a>
+      <a href="#premii" class="ro">Premii</a><a href="#premii" class="en">Awards</a>
+      <a href="#personal" class="ro">Viața personală</a><a href="#personal" class="en">Personal Life</a>
+      <a href="#donatii" class="ro">Donații</a><a href="#donatii" class="en">Donations</a>
+      <a href="#galerie" class="ro">Galerie</a><a href="#galerie" class="en">Gallery</a>
+    </div>
+  </div>
+</div>
+
+<!-- BIOGRAFIE -->
+<div class="section" id="biografie">
+  <h2 class="section-title ro">Bio<span>grafie</span></h2>
+  <h2 class="section-title en">Bio<span>graphy</span></h2>
+  <div class="section-line"></div>
+  <div class="prose ro">
+    <p>Lee Ji-eun, cunoscută lumii sub numele de scenă <strong>IU</strong> (아이유), s-a născut pe 16 mai 1993 în Seoul, Coreea de Sud. Numele de scenă provine din inițialele „I and U" – „Eu și Tu" – o declarație despre conexiunea dintre artist și ascultător.</p>
+    <p>Puțini știu că în spatele uneia dintre cele mai strălucitoare stele ale Coreei se ascunde o poveste de o duritate uluitoare. Familia ei a trecut printr-o criză financiară profundă: bunicul patern a luat credite imense care au aruncat întreaga familie în datorii. Părinții s-au separat temporar din cauza sărăciei. <strong>IU a trăit o perioadă cu bunica ei în Cheongju, într-un apartament cu gândaci</strong>, fără bani suficienți nici pentru mâncare.</p>
+    <p>La 11 ani, IU a decis că va deveni cântăreață – nu din capriciu, ci din necesitate. A început să dea audiții, respinsă de aproape toate agențiile. Abia la 13 ani a semnat cu LOEN Entertainment. Antrenamentul de trei ani a fost dur. În tot acest timp, ea și-a purtat cu ea o promisiune: va plăti datoriile familiei.</p>
+    <p>La 15 ani, în 2008, a debutat. Debutul nu a fost un succes imediat. Dar IU nu a renunțat. În 2010, cu single-ul <strong>„Good Day"</strong>, întreaga Coreea a auzit-o. Piesa a petrecut cinci săptămâni consecutive pe primul loc în Gaon Digital Chart și a fost clasată de Billboard drept <strong>cea mai bună piesă K-pop a anilor 2010</strong>.</p>
+    <p>De atunci, IU a construit una dintre cele mai impresionante cariere din istoria muzicii coreene – nu doar ca interpretă, ci ca <strong>compozitoare, textieră și producătoare</strong> a propriei muzici.</p>
+  </div>
+  <div class="prose en">
+    <p>Lee Ji-eun, known worldwide as <strong>IU</strong> (아이유), was born on May 16, 1993, in Seoul, South Korea. Her stage name comes from the initials "I and U" — a declaration of connection between artist and listener.</p>
+    <p>Few know that behind one of Korea's brightest stars lies a story of astonishing hardship. Her family suffered a severe financial crisis: her paternal grandfather took out enormous loans that plunged the entire family into debt. Her parents temporarily separated due to poverty. <strong>IU lived with her grandmother in Cheongju, in a cockroach-infested apartment</strong>, without enough money even for food.</p>
+    <p>At 11, IU decided she would become a singer — not out of whim, but necessity. She auditioned endlessly, rejected by nearly every agency. Only at 13 did she sign with LOEN Entertainment. Three grueling years of training followed, sustained by her promise: she would pay off her family's debts.</p>
+    <p>At 15, in 2008, she debuted. The debut was not an immediate success. But IU did not quit. In 2010, with <strong>"Good Day"</strong>, all of Korea heard her. Five consecutive weeks at #1 on Gaon Digital Chart, ranked by Billboard as the <strong>best K-pop song of the 2010s</strong>.</p>
+    <p>Since then, IU has built one of the most impressive careers in Korean music history — not just as a performer, but as a <strong>songwriter, lyricist, and producer</strong> of her own music.</p>
+  </div>
+  <div class="quote-box">
+    <p class="quote-text ro">„Îmi place atât de mult să fiu la studio. Acolo puteam să mănânc cât voiam, aveam un loc cald unde să dorm și puteam face muzică toată ziua."</p>
+    <p class="quote-text en">"I love being at the studio so much. There, I could eat as much as I wanted, I had a warm place to sleep, and I could make music all day."</p>
+    <p class="quote-attr">— IU</p>
+  </div>
+  <a href="#top" class="back-top ro">&#8593; Sus</a><a href="#top" class="back-top en">&#8593; Top</a>
+</div>
+
+<!-- CRONOLOGIE -->
+<div class="section" id="cronologie">
+  <h2 class="section-title ro">Crono<span>logie</span></h2>
+  <h2 class="section-title en">Time<span>line</span></h2>
+  <div class="section-line"></div>
+  <div class="timeline ro">
+    <div class="tl-item"><div class="tl-year">1993</div><div class="tl-body"><h3>Naștere</h3><p>Lee Ji-eun se naște pe 16 mai 1993 în Seoul. Familia va trece curând prin dificultăți financiare grave din cauza datoriilor lăsate de bunicul patern.</p></div></div>
+    <div class="tl-item"><div class="tl-year">~2004</div><div class="tl-body"><h3>Camera cu gândaci</h3><p>Familia IU se confruntă cu sărăcia extremă. IU locuiește cu bunica în Cheongju, într-un apartament cu gândaci. Nu au bani suficienți nici pentru mâncare.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2004</div><div class="tl-body"><h3>Decizia la 11 ani</h3><p>La 11 ani, IU decide că va deveni cântăreață. Începe audiții, dar este respinsă de nenumărate agenții. Nu se descurajează.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2006</div><div class="tl-body"><h3>Contract cu LOEN Entertainment</h3><p>La 13 ani semnează cu LOEN Entertainment. Urmează trei ani de antrenament intens – canto, dans, performanță.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2008</div><div class="tl-body"><h3>Debut – „Lost and Found"</h3><p>La 15 ani debutează cu EP-ul „Lost and Found". Debutul nu intră în topuri. IU nu renunță.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2010</div><div class="tl-body"><h3>Explozia națională – „Good Day"</h3><p>5 săptămâni consecutive pe locul 1 în Gaon Chart. IU are 17 ani. Plătește datoriile familiei. Piesa „Nagging" inaugurează termenul de „Perfect All-Kill".</p></div></div>
+    <div class="tl-item"><div class="tl-year">2011</div><div class="tl-body"><h3>Debut ca actriță &amp; „Last Fantasy"</h3><p>Debut în drame TV. Albumul „Last Fantasy" debutează pe locul 1 (125.000+ copii). „You &amp; I" depășește 6 milioane descărcări plătite.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2012</div><div class="tl-body"><h3>Absolvire liceu &amp; renunțarea la facultate</h3><p>Termină liceul, renunță la facultate pentru carieră. Numită ambasadoare a campaniei anti-bullying a Poliției Naționale.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2013</div><div class="tl-body"><h3>Ofițer onorific de poliție</h3><p>Devine membră onorare a poliției coreene. Promovată la grad superior în 2014.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2016</div><div class="tl-body"><h3>„Moon Lovers: Scarlet Heart Ryeo"</h3><p>Rol principal în drama istorică cu succes internațional uriaș. Demonstrează că este și actriță cu gamă emoțională remarcabilă.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2017</div><div class="tl-body"><h3>Albumul „Palette"</h3><p>Maturitate artistică: compune și scrie textele majorității pieselor. Colaborează cu G-Dragon și Epik High.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2020</div><div class="tl-body"><h3>EDAM Entertainment</h3><p>Continuă activitatea sub EDAM Entertainment (subsidiară Kakao), cu control creativ deplin.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2022</div><div class="tl-body"><h3>Relația cu Lee Jong-suk</h3><p>Confirmă public relația cu actorul Lee Jong-suk. Anunțul este primit cu căldură de fani.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2024</div><div class="tl-body"><h3>„Love Wins All" &amp; Turul HEREH</h3><p>Lansează „Love Wins All" (feat. V din BTS), care atinge PAK. Turul mondial HEREH – primul concert al unei artiste feminine pe Stadionul Seoul World Cup. Al 100-lea concert al carierei.</p></div></div>
+  </div>
+  <div class="timeline en">
+    <div class="tl-item"><div class="tl-year">1993</div><div class="tl-body"><h3>Birth</h3><p>Lee Ji-eun is born on May 16, 1993, in Seoul. Her family will soon face severe financial hardship due to debts left by her paternal grandfather.</p></div></div>
+    <div class="tl-item"><div class="tl-year">~2004</div><div class="tl-body"><h3>The Cockroach Apartment</h3><p>IU's family faces extreme poverty. She lives with her grandmother in Cheongju, in a cockroach-infested apartment. They barely have enough money for food.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2004</div><div class="tl-body"><h3>The Decision at Age 11</h3><p>At just 11, IU decides she will become a singer. She auditions relentlessly, rejected by agency after agency. She never gives up.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2006</div><div class="tl-body"><h3>Contract with LOEN Entertainment</h3><p>At 13, she finally signs with LOEN Entertainment. Three years of intense training begin — vocals, dance, performance.</p></div></div>
+    <div class="tl-item"><div class="tl-year">2008</div><div class="tl-body"><h3>Debut – "Lost and Found"</h3><p>At 15, she debuts with the EP "Lost and Found." It fails to chart. IU does not quit.</p></div></div>
+    <div class="tl-item"><div cla
